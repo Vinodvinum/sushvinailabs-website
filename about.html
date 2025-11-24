@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Sushvin AI Labs - Empowering Mysuru businesses with AI-powered automation, WhatsApp solutions, and fast web design. Meet our leadership team.">
+    <title>About Us | Sushvin AI Labs</title>
+    
+    <style>
+        :root {
+            --color-primary: #32808d;
+            --color-primary-hover: #1d7480;
+            --color-bg: #fcfcf9;
+            --color-surface: #fffffe;
+            --color-text: #133434;
+            --color-text-secondary: #626c6c;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-accent: #32b8c6;
+            --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1f2121;
+                --color-surface: #262828;
+                --color-text: #f5f5f5;
+                --color-text-secondary: rgba(167, 169, 169, 0.7);
+                --color-border: rgba(119, 124, 124, 0.3);
+            }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-base);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        .hero-about {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
+        }
+        
+        .hero-about h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-about p {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+        }
+        
+        .content-section.alt {
+            background: var(--color-surface);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--color-primary);
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--color-primary);
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 2rem 0 1rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-about h1 { font-size: 2rem; }
+            .two-column { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Sushvin AI Labs</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-about">
+        <div class="container">
+            <h1>Empowering Mysuru Businesses with AI</h1>
+            <p>We transform local businesses through intelligent automation, WhatsApp solutions, and beautiful web experiences that drive real growth.</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="two-column">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-primary);">Our Story</h2>
+                    <p style="margin-bottom: 1rem;">Founded in 2025, Sushvin AI Labs was born from a simple observation: Mysuru's vibrant business community needed modern, accessible automation solutions tailored to local needs.</p>
+                    <p style="margin-bottom: 1rem;">We saw clinics drowning in appointment calls, salons managing bookings on paper, and coaching centers struggling with manual follow-ups. Traditional automation was either too expensive, too complex, or built for enterprises—not for local businesses.</p>
+                    <p>So we built something different: AI-powered automation that's affordable, easy to use, and delivers results in days, not months.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); border-radius: 12px; height: 300px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
+                    🚀
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p style="text-align: center; font-size: 1.25rem; color: var(--color-text-secondary); max-width: 800px; margin: 0 auto;">
+                To make AI-powered automation accessible to every small and medium business in Mysuru, helping them save time, reduce costs, and focus on what they do best—serving their customers.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <p>Days to Launch</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <p>Hours Saved Weekly</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <p>Automated Support</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">₹4,999</div>
+                    <p>Starting From</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Local Focus</h3>
+                    <p>Built specifically for Mysuru businesses. We understand your market, customers, and challenges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Deployment</h3>
+                    <p>Live in 7 days or less. No months-long implementations or complex training required.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Affordable</h3>
+                    <p>Enterprise-grade automation at small business prices. Starting at just ₹4,999/month.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Hands-On Support</h3>
+                    <p>We don't just set it up—we train your team and provide ongoing support in your language.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>Real ROI from day one. Our clients save 10+ hours weekly and see immediate improvements.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Your data stays private. Built on trusted platforms with enterprise-grade security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section alt">
+        <div class="container">
+            <h2 class="section-title">Meet Our Leadership</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">👩‍💼</div>
+                    <h3>Sushmitha S</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">CEO & Managing Director</p>
+                    <p>Strategic visionary driving operational excellence and client success across all automation initiatives.</p>
+                </div>
+                <div class="feature-card">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">👨‍💼</div>
+                    <h3>Kiran N</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">CAO & Director of Operations</p>
+                    <p>Ensuring flawless delivery and world-class service for every client, every project.</p>
+                </div>
+                <div class="feature-card">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white;">📈</div>
+                    <h3>Dayananda</h3>
+                    <p style="color: var(--color-primary); font-weight: 600; margin-bottom: 0.5rem;">CGO & Head of Business</p>
+                    <p>Building partnerships and expanding our reach to transform more Mysuru businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Transform Your Business?</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Join Mysuru's leading businesses already saving time and growing with AI automation.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-white">Get Started Today</a>
+                <a href="https://wa.me/916361319844" class="btn btn-white">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sushvin AI Labs. All rights reserved.</p>
+            <p style="opacity: 0.6; font-size: 0.85rem; margin-top: 0.5rem;">Founded by Vinod M | Creative Visionary Architect</p>
+        </div>
+    </footer>
+</body>
+</html>

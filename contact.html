@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sushvin AI Labs - Get in touch for WhatsApp automation, AI business automation, and web design services in Mysuru. Free consultation available.">
+    <meta name="keywords" content="contact Sushvin AI Labs, automation consultation Mysuru, WhatsApp automation inquiry, business automation quote">
+    <title>Contact Us | Sushvin AI Labs</title>
+    
+    <style>
+        :root {
+            --color-primary: #32808d;
+            --color-primary-hover: #1d7480;
+            --color-bg: #fcfcf9;
+            --color-surface: #fffffe;
+            --color-text: #133434;
+            --color-text-secondary: #626c6c;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-accent: #32b8c6;
+            --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1f2121;
+                --color-surface: #262828;
+                --color-text: #f5f5f5;
+                --color-text-secondary: rgba(167, 169, 169, 0.7);
+                --color-border: rgba(119, 124, 124, 0.3);
+            }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-base);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        .hero-contact {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
+        }
+        
+        .hero-contact h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-contact p {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-section {
+            padding: 4rem 0;
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-form-wrapper {
+            background: var(--color-surface);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form-wrapper h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: var(--color-bg);
+            color: var(--color-text);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: 2px solid var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(50, 128, 141, 0.3);
+        }
+        
+        .success-message {
+            background: rgba(50, 184, 198, 0.15);
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .info-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            transition: all 0.3s;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .info-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .info-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+        
+        .info-content p {
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+        
+        .info-content a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .info-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .hours-list {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .whatsapp-cta {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .whatsapp-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .whatsapp-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .btn-whatsapp {
+            background: white;
+            color: #128C7E;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 2rem 0 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-contact h1 { font-size: 2rem; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Sushvin AI Labs</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-contact">
+        <div class="container">
+            <h1>Let's Transform Your Business Together</h1>
+            <p>Ready to automate and grow? Get in touch and we'll respond within 24 hours.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="business">Business Type *</label>
+                            <select id="business" name="business" required>
+                                <option value="">Select your business type</option>
+                                <option value="clinic">Clinic / Healthcare</option>
+                                <option value="salon">Salon / Spa / Beauty</option>
+                                <option value="coaching">Coaching Center / Institute</option>
+                                <option value="retail">Retail Store / Shop</option>
+                                <option value="restaurant">Restaurant / Cafe</option>
+                                <option value="services">Professional Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="whatsapp">WhatsApp Automation</option>
+                                <option value="automation">Business Process Automation</option>
+                                <option value="website">Web Design & Development</option>
+                                <option value="all">Complete Package (All Services)</option>
+                                <option value="consultation">Free Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Needs</label>
+                            <textarea id="message" name="message" placeholder="Describe your business requirements and challenges..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                        
+                        <div class="success-message" id="successMessage">
+                            ✓ Thank you! We'll contact you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Call Us</h3>
+                            <p>Speak directly with our team</p>
+                            <p><a href="tel:+916361319844">+91 6361319844</a></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Mon-Sat: 9:00 AM - 7:00 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>For detailed inquiries</p>
+                            <p><a href="mailto:info@sushvinailabs.in">info@sushvinailabs.in</a></p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Visit Us</h3>
+                            <p>Mysuru, Karnataka, India</p>
+                            <p style="font-size: 0.9rem; margin-top: 0.5rem;">Serving businesses across Mysuru and surrounding areas</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-content">
+                            <h3>Business Hours</h3>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday</span><span>9:00 AM - 7:00 PM</span></li>
+                                <li><span>Saturday</span><span>10:00 AM - 5:00 PM</span></li>
+                                <li><span>Sunday</span><span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div class="whatsapp-cta">
+                <h3>💬 Prefer WhatsApp?</h3>
+                <p>Get instant responses to your queries. Chat with us now!</p>
+                <a href="https://wa.me/916361319844?text=Hi, I want to learn more about Sushvin AI Labs services" class="btn-whatsapp">
+                    <span style="font-size: 1.5rem;">💬</span> Start WhatsApp Chat
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sushvin AI Labs. All rights reserved.</p>
+            <p style="opacity: 0.6; font-size: 0.85rem; margin-top: 0.5rem;">Founded by Vinod M | Creative Visionary Architect</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                business: document.getElementById('business').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Form submission:', formData);
+            
+            document.getElementById('successMessage').classList.add('show');
+            this.reset();
+            
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.remove('show');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sushvin AI Labs Blog - Expert insights on WhatsApp automation, AI business automation, and digital transformation for Mysuru businesses.">
+    <title>Blog | Sushvin AI Labs</title>
+    
+    <style>
+        :root {
+            --color-primary: #32808d;
+            --color-bg: #fcfcf9;
+            --color-surface: #fffffe;
+            --color-text: #133434;
+            --color-text-secondary: #626c6c;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1f2121;
+                --color-surface: #262828;
+                --color-text: #f5f5f5;
+                --color-text-secondary: rgba(167, 169, 169, 0.7);
+                --color-border: rgba(119, 124, 124, 0.3);
+            }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-base);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .hero-blog {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .blog-card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .blog-card-content {
+            padding: 2rem;
+        }
+        
+        .blog-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .blog-meta {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-card a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">Sushvin AI Labs</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../services.html">Services</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-blog">
+        <div class="container">
+            <h1>Blog & Insights</h1>
+            <p>Expert guidance on AI automation, WhatsApp business, and digital transformation</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2>WhatsApp Business Automation for Mysuru Businesses</h2>
+                    <p class="blog-meta">November 24, 2025 • 8 min read</p>
+                    <p>Discover how local Mysuru businesses are using WhatsApp automation to save time, increase conversions, and provide 24/7 customer service.</p>
+                    <a href="whatsapp-automation-mysuru.html">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2>5 Benefits of AI Chatbots for Small Businesses</h2>
+                    <p class="blog-meta">November 24, 2025 • 7 min read</p>
+                    <p>Learn how AI-powered chatbots can transform customer engagement, reduce costs, and scale your small business operations efficiently.</p>
+                    <a href="ai-chatbot-benefits.html">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2>Website Design Tips for Local Businesses in 2025</h2>
+                    <p class="blog-meta">November 24, 2025 • 9 min read</p>
+                    <p>Essential web design principles for local businesses to create fast, mobile-friendly, and SEO-optimized websites that convert.</p>
+                    <a href="website-design-tips.html">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2>Lead Generation Strategies for Service Businesses</h2>
+                    <p class="blog-meta">November 24, 2025 • 10 min read</p>
+                    <p>Proven strategies to attract, capture, and convert leads for clinics, salons, coaching centers, and professional services.</p>
+                    <a href="lead-generation-strategies.html">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2>Digital Transformation for Mysuru SMEs</h2>
+                    <p class="blog-meta">November 24, 2025 • 8 min read</p>
+                    <p>A practical guide to digital transformation for small and medium businesses in Mysuru, from automation to online presence.</p>
+                    <a href="digital-transformation-mysuru.html">Read More →</a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sushvin AI Labs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

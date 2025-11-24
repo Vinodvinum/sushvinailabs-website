@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sushvin AI Labs - WhatsApp automation, AI business process automation, and web design for clinics, salons, and coaching centers in Mysuru. Done-for-you setup in 7 days.">
+    <meta name="keywords" content="WhatsApp automation Mysuru, AI business automation Karnataka, web design Mysuru, SME automation India">
+    <title>Sushvin AI Labs | AI + WhatsApp Automation for Mysuru Businesses</title>
+    
+    <style>
+        :root {
+            --color-primary: #32808d;
+            --color-primary-hover: #1d7480;
+            --color-bg: #fcfcf9;
+            --color-surface: #fffffe;
+            --color-text: #133434;
+            --color-text-secondary: #626c6c;
+            --color-border: rgba(94, 82, 64, 0.2);
+            --color-accent: #32b8c6;
+            --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #1f2121;
+                --color-surface: #262828;
+                --color-text: #f5f5f5;
+                --color-text-secondary: rgba(167, 169, 169, 0.7);
+                --color-border: rgba(119, 124, 124, 0.3);
+            }
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-base);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(50, 128, 141, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 2px solid var(--color-border);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        
+        /* Services */
+        .services {
+            padding: 5rem 0;
+            background: var(--color-surface);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        /* Team Section */
+        .team {
+            padding: 5rem 0;
+            background: var(--color-bg);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-card {
+            background: var(--color-surface);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            border: 4px solid var(--color-border);
+        }
+        
+        .team-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+        }
+        
+        .team-card .role {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .team-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 5rem 0;
+            background: var(--color-surface);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--color-border);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .pricing-card:hover {
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 40px rgba(50, 128, 141, 0.2);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin: 1rem 0;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 5rem 0;
+            background: var(--color-bg);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: var(--color-surface);
+            color: var(--color-text);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: 2px solid var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: var(--color-bg);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-section a:hover {
+            opacity: 1;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .founder-credit {
+            opacity: 0.6;
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+        }
+        
+        .legal-links {
+            margin-top: 1rem;
+            opacity: 0.7;
+        }
+        
+        .legal-links a {
+            color: var(--color-accent);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .legal-links a:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        .success-message {
+            background: rgba(50, 184, 198, 0.1);
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .nav-links { display: none; }
+            .services-grid,
+            .pricing-grid,
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Sushvin AI Labs</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog/index.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AI + WhatsApp Automation That Turns Chats Into Customers</h1>
+            <p>Done-for-you setup in 7 days, plus a fast, SEO-ready website for clinics, salons, and coaching centers in Mysuru</p>
+            <div class="hero-cta">
+                <a href="https://wa.me/916361319844?text=Hi%20Sushvin%20AI%20Labs" class="btn btn-primary">💬 Chat on WhatsApp</a>
+                <a href="contact.html" class="btn btn-secondary">📅 Book a 15-min Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>WhatsApp Automation</h3>
+                    <p>Auto-replies, lead capture, booking reminders, and payment links. Turn every chat into a customer opportunity.</p>
+                    <ul style="margin-top: 1rem; list-style: none;">
+                        <li>✓ 24/7 instant responses</li>
+                        <li>✓ Automated bookings</li>
+                        <li>✓ Payment collection</li>
+                        <li>✓ Campaign broadcasts</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI Business Process Automation</h3>
+                    <p>Streamline invoicing, inventory, CRM, and reporting. Save 10+ hours per week on manual tasks.</p>
+                    <ul style="margin-top: 1rem; list-style: none;">
+                        <li>✓ Automated workflows</li>
+                        <li>✓ Smart analytics</li>
+                        <li>✓ Multi-platform sync</li>
+                        <li>✓ Custom integrations</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Fast Web Design</h3>
+                    <p>Beautiful, SEO-ready websites that load instantly and convert visitors into customers.</p>
+                    <ul style="margin-top: 1rem; list-style: none;">
+                        <li>✓ Mobile-first design</li>
+                        <li>✓ SEO optimized</li>
+                        <li>✓ 90+ speed score</li>
+                        <li>✓ Lead form integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Meet Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">👩‍💼</div>
+                    <h3>Sushmitha S</h3>
+                    <p class="role">CEO & Managing Director</p>
+                    <p>Leading strategic vision and operational excellence, driving Sushvin AI Labs to empower Mysuru businesses with cutting-edge automation solutions.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">👨‍💼</div>
+                    <h3>Kiran N</h3>
+                    <p class="role">CAO & Director of Operations</p>
+                    <p>Orchestrating seamless execution and delivery, ensuring every client receives world-class service and transformative automation results.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">📈</div>
+                    <h3>Dayananda</h3>
+                    <p class="role">CGO & Head of Business and Marketing</p>
+                    <p>Expanding market presence and building lasting partnerships, connecting local businesses with AI-powered growth opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">₹4,999<span style="font-size: 1rem; color: var(--color-text-secondary);">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>WhatsApp auto-replies</li>
+                        <li>10 FAQ templates</li>
+                        <li>Lead capture form</li>
+                        <li>1-page website</li>
+                        <li>Basic analytics</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start Trial</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div style="background: var(--color-primary); color: white; padding: 0.5rem; margin: -2rem -2rem 1rem; border-radius: 10px 10px 0 0;">Most Popular</div>
+                    <h3>Growth</h3>
+                    <div class="price">₹9,999<span style="font-size: 1rem; color: var(--color-text-secondary);">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Everything in Starter</li>
+                        <li>Booking & reminders</li>
+                        <li>Payment links</li>
+                        <li>Product catalog</li>
+                        <li>3-5 page website</li>
+                        <li>SEO basics</li>
+                        <li>Monthly reports</li>
+                        <li>WhatsApp support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start Trial</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">₹19,999<span style="font-size: 1rem; color: var(--color-text-secondary);">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Everything in Growth</li>
+                        <li>Full CRM & pipeline</li>
+                        <li>Role-based access</li>
+                        <li>Calendar integration</li>
+                        <li>Zoho/Stripe sync</li>
+                        <li>Multi-location site</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get Started Today</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="business">Business Type *</label>
+                    <select id="business" name="business" required>
+                        <option value="">Select your business type</option>
+                        <option value="clinic">Clinic / Healthcare</option>
+                        <option value="salon">Salon / Spa</option>
+                        <option value="coaching">Coaching Center</option>
+                        <option value="retail">Retail Store</option>
+                        <option value="restaurant">Restaurant / Cafe</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Interested In *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="whatsapp">WhatsApp Automation</option>
+                        <option value="automation">Business Process Automation</option>
+                        <option value="website">Web Design</option>
+                        <option value="all">Complete Package</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your needs..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! We'll contact you within 24 hours.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sushvin AI Labs</h3>
+                    <p>AI-powered automation and web solutions for Mysuru businesses.</p>
+                    <p style="margin-top: 1rem;">📍 Mysuru, Karnataka, India</p>
+                    <p>📞 +91 6361319844</p>
+                    <p>📧 info@sushvinailabs.in</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html">WhatsApp Automation</a></li>
+                        <li><a href="services.html">Business Automation</a></li>
+                        <li><a href="services.html">Web Design</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/sushvinailabs" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://wa.me/916361319844" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://instagram.com/sushvinailabs" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sushvin AI Labs. All rights reserved.</p>
+                <p class="founder-credit">Founded by Vinod M | Creative Visionary Architect</p>
+                <p class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a> | 
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/916361319844?text=Hi%20Sushvin%20AI%20Labs" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                business: document.getElementById('business').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            console.log('Form submission:', formData);
+            document.getElementById('successMessage').classList.add('show');
+            this.reset();
+            
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.remove('show');
+            }, 5000);
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
