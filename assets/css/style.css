@@ -889,15 +889,37 @@ article ol li {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 0.75rem; /* give some horizontal room */
     }
 
+    /* Force hamburger visible and positioned */
     .menu-toggle {
-        display: flex;
+        display: flex !important;
         order: 2;
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        padding: 0.5rem;
+        z-index: 1200;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-toggle span {
+        width: 22px;
+        height: 2.5px;
+        margin: 3px 0;
+        background: currentColor;
+        display: block;
+        transition: transform .28s ease, opacity .2s ease;
     }
 
     .logo {
         order: 1;
+        padding-right: 3.25rem; /* avoid overlap with the hamburger */
     }
 
     .nav-links {
@@ -909,34 +931,49 @@ article ol li {
         background: var(--color-surface);
         flex-direction: column;
         gap: 0;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         border-bottom: 1px solid var(--color-border);
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.28s ease;
         display: flex; /* keep layout predictable; collapsed by max-height */
+        pointer-events: none; /* avoid accidental clicks when closed */
     }
 
     .nav-links.active {
-        max-height: 480px;
+        max-height: 520px;
+        pointer-events: auto;
     }
 
     .nav-links li { border-bottom: 1px solid var(--color-border); }
     .nav-links li:last-child { border-bottom: none; }
-    .nav-links a { display: block; padding: 1rem 1.5rem; }
+    .nav-links a { display: block; padding: 0.9rem 1.25rem; }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-6px);
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 
     .hero h1,
     .hero-contact h1,
     .hero-services h1,
-    .hero-about h1 { 
-        font-size: 2rem; 
+    .hero-about h1 {
+        font-size: 2rem;
     }
-    
+
     .hero p,
     .hero-contact p,
     .hero-services p,
-    .hero-about p { 
-        font-size: 1rem; 
+    .hero-about p {
+        font-size: 1rem;
     }
     
     .services-grid,
