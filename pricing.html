@@ -7,398 +7,7 @@
     <meta name="keywords" content="automation pricing Mysuru, WhatsApp automation cost, AI business automation pricing, web design pricing Karnataka">
     <title>Pricing | Sushvin AI Labs</title>
     
-    <style>
-        :root {
-            --color-primary: #32808d;
-            --color-primary-hover: #1d7480;
-            --color-bg: #fcfcf9;
-            --color-surface: #fffffe;
-            --color-text: #133434;
-            --color-text-secondary: #626c6c;
-            --color-border: rgba(94, 82, 64, 0.2);
-            --color-accent: #32b8c6;
-            --font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --color-bg: #1f2121;
-                --color-surface: #262828;
-                --color-text: #f5f5f5;
-                --color-text-secondary: rgba(167, 169, 169, 0.7);
-                --color-border: rgba(119, 124, 124, 0.3);
-            }
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: var(--font-base);
-            background: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: var(--color-surface);
-            border-bottom: 1px solid var(--color-border);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--color-primary);
-        }
-        
-        .hero-pricing {
-            padding: 4rem 0 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-surface) 100%);
-        }
-        
-        .hero-pricing h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-pricing p {
-            font-size: 1.25rem;
-            color: var(--color-text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .pricing-section {
-            padding: 3rem 0;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .pricing-card {
-            background: var(--color-surface);
-            padding: 0;
-            border-radius: 16px;
-            border: 2px solid var(--color-border);
-            transition: all 0.3s;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-        
-        .pricing-card.featured {
-            border-color: var(--color-primary);
-            box-shadow: 0 8px 32px rgba(50, 128, 141, 0.25);
-            transform: scale(1.05);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.08) translateY(-8px);
-        }
-        
-        .pricing-header {
-            padding: 2rem;
-            text-align: center;
-            background: var(--color-bg);
-        }
-        
-        .pricing-card.featured .pricing-header {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-            color: white;
-        }
-        
-        .badge {
-            background: var(--color-primary);
-            color: white;
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-        
-        .pricing-card.featured .badge {
-            background: rgba(255,255,255,0.2);
-        }
-        
-        .plan-name {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-        
-        .price-currency {
-            font-size: 1.5rem;
-        }
-        
-        .price-period {
-            font-size: 1rem;
-            font-weight: 400;
-            opacity: 0.7;
-        }
-        
-        .pricing-body {
-            padding: 2rem;
-        }
-        
-        .pricing-features {
-            list-style: none;
-            margin: 0;
-        }
-        
-        .pricing-features li {
-            padding: 0.75rem 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-        
-        .pricing-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-features li:before {
-            content: "✓";
-            color: var(--color-primary);
-            font-weight: bold;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-        
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            text-align: center;
-            width: 100%;
-            margin-top: 1.5rem;
-        }
-        
-        .btn-primary {
-            background: var(--color-primary);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: var(--color-primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(50, 128, 141, 0.3);
-        }
-        
-        .comparison-section {
-            padding: 4rem 0;
-            background: var(--color-surface);
-        }
-        
-        .comparison-table {
-            width: 100%;
-            margin: 2rem 0;
-            border-collapse: collapse;
-            background: var(--color-bg);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .comparison-table th {
-            background: var(--color-primary);
-            color: white;
-            padding: 1.25rem;
-            text-align: left;
-            font-weight: 600;
-        }
-        
-        .comparison-table td {
-            padding: 1rem 1.25rem;
-            border-bottom: 1px solid var(--color-border);
-        }
-        
-        .comparison-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .comparison-table tr:nth-child(even) {
-            background: var(--color-surface);
-        }
-        
-        .check {
-            color: var(--color-primary);
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
-        
-        .faq-section {
-            padding: 4rem 0;
-        }
-        
-        .faq-grid {
-            display: grid;
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 2rem auto;
-        }
-        
-        .faq-item {
-            background: var(--color-surface);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--color-border);
-        }
-        
-        .faq-item h3 {
-            color: var(--color-primary);
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
-            padding: 4rem 0;
-            text-align: center;
-            color: white;
-        }
-        
-        .btn-white {
-            background: white;
-            color: var(--color-primary);
-        }
-        
-        .btn-white:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--color-text);
-            color: var(--color-bg);
-            padding: 3rem 0 1rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--color-accent);
-        }
-        
-        .footer-section ul {
-            list-style: none;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-section a {
-            color: var(--color-bg);
-            text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-        
-        .footer-section a:hover {
-            opacity: 1;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .founder-credit {
-            opacity: 0.6;
-            font-size: 0.85rem;
-            margin-top: 0.5rem;
-        }
-        
-        .legal-links {
-            margin-top: 1rem;
-            opacity: 0.7;
-        }
-        
-        .legal-links a {
-            color: var(--color-accent);
-            text-decoration: none;
-            margin: 0 0.75rem;
-            font-size: 0.9rem;
-        }
-        
-        .legal-links a:hover {
-            text-decoration: underline;
-            opacity: 1;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-pricing h1 { font-size: 2rem; }
-            .pricing-card.featured { transform: scale(1); }
-            .nav-links { display: none; }
-            .comparison-table { font-size: 0.9rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
@@ -415,26 +24,24 @@
         </nav>
     </header>
 
-    <section class="hero-pricing">
+    <section class="hero-contact">
         <div class="container">
             <h1>Simple, Transparent Pricing</h1>
             <p>Choose the perfect plan for your business. No hidden fees. No long-term contracts. Cancel anytime.</p>
         </div>
     </section>
 
-    <section class="pricing-section">
+    <section class="pricing">
         <div class="container">
             <div class="pricing-grid">
                 <!-- Starter Plan -->
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="plan-name">Starter</div>
-                        <div class="price">
-                            <span class="price-currency">₹</span>4,999<span class="price-period">/month</span>
-                        </div>
+                    <div style="padding: 2rem; text-align: center; background: var(--color-bg);">
+                        <div style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Starter</div>
+                        <div style="font-size: 3rem; font-weight: 700; margin: 1rem 0;">₹4,999<span style="font-size: 1rem; font-weight: 400; opacity: 0.7;">/month</span></div>
                         <p style="margin: 0;">Perfect for getting started</p>
                     </div>
-                    <div class="pricing-body">
+                    <div style="padding: 2rem;">
                         <ul class="pricing-features">
                             <li><strong>WhatsApp Auto-Replies:</strong> Instant responses to common questions</li>
                             <li><strong>10 FAQ Templates:</strong> Pre-built conversation flows</li>
@@ -443,21 +50,19 @@
                             <li><strong>Basic Analytics:</strong> Track conversations & leads</li>
                             <li><strong>Email Support:</strong> Response within 24 hours</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Start 7-Day Trial</a>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start 7-Day Trial</a>
                     </div>
                 </div>
 
                 <!-- Growth Plan (Featured) -->
                 <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <span class="badge">Most Popular</span>
-                        <div class="plan-name">Growth</div>
-                        <div class="price">
-                            <span class="price-currency">₹</span>9,999<span class="price-period">/month</span>
-                        </div>
-                        <p style="margin: 0;">For growing businesses</p>
+                    <div style="padding: 2rem; text-align: center; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%); color: white;">
+                        <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600; border-radius: 20px; display: inline-block; margin-bottom: 1rem;">Most Popular</span>
+                        <div style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Growth</div>
+                        <div style="font-size: 3rem; font-weight: 700; margin: 1rem 0;">₹9,999<span style="font-size: 1rem; font-weight: 400; opacity: 0.9;">/month</span></div>
+                        <p style="margin: 0; opacity: 0.95;">For growing businesses</p>
                     </div>
-                    <div class="pricing-body">
+                    <div style="padding: 2rem;">
                         <ul class="pricing-features">
                             <li><strong>Everything in Starter, plus:</strong></li>
                             <li><strong>Booking & Reminders:</strong> Automated appointment management</li>
@@ -468,20 +73,18 @@
                             <li><strong>Monthly Reports:</strong> Detailed performance insights</li>
                             <li><strong>WhatsApp Support:</strong> Priority assistance</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Start 7-Day Trial</a>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start 7-Day Trial</a>
                     </div>
                 </div>
 
                 <!-- Pro Plan -->
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="plan-name">Pro</div>
-                        <div class="price">
-                            <span class="price-currency">₹</span>19,999<span class="price-period">/month</span>
-                        </div>
+                    <div style="padding: 2rem; text-align: center; background: var(--color-bg);">
+                        <div style="font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">Pro</div>
+                        <div style="font-size: 3rem; font-weight: 700; margin: 1rem 0;">₹19,999<span style="font-size: 1rem; font-weight: 400; opacity: 0.7;">/month</span></div>
                         <p style="margin: 0;">For scaling operations</p>
                     </div>
-                    <div class="pricing-body">
+                    <div style="padding: 2rem;">
                         <ul class="pricing-features">
                             <li><strong>Everything in Growth, plus:</strong></li>
                             <li><strong>Full CRM & Pipeline:</strong> Complete customer management</li>
@@ -492,7 +95,7 @@
                             <li><strong>Advanced Analytics:</strong> Custom dashboards & reports</li>
                             <li><strong>Priority Support:</strong> Dedicated account manager</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary">Start 7-Day Trial</a>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Start 7-Day Trial</a>
                     </div>
                 </div>
             </div>
@@ -500,12 +103,12 @@
             <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: rgba(50, 128, 141, 0.1); border-radius: 12px;">
                 <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Need a Custom Solution?</h3>
                 <p style="margin-bottom: 1rem;">We build custom automation workflows and integrations for unique business needs.</p>
-                <a href="contact.html" class="btn btn-primary" style="width: auto; display: inline-block;">Contact Sales</a>
+                <a href="contact.html" class="btn btn-primary" style="display: inline-block;">Contact Sales</a>
             </div>
         </div>
     </section>
 
-    <section class="comparison-section">
+    <section class="pricing" style="background: var(--color-surface);">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-primary);">Compare Plans</h2>
             
@@ -578,38 +181,38 @@
         </div>
     </section>
 
-    <section class="faq-section">
+    <section class="pricing">
         <div class="container">
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-primary);">Frequently Asked Questions</h2>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How does the 7-day trial work?</h3>
+            <div style="display: grid; gap: 1.5rem; max-width: 800px; margin: 2rem auto;">
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">How does the 7-day trial work?</h3>
                     <p>Start with any plan completely free for 7 days. No credit card required. Full access to all features. Cancel anytime during the trial period.</p>
                 </div>
                 
-                <div class="faq-item">
-                    <h3>Can I cancel anytime?</h3>
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">Can I cancel anytime?</h3>
                     <p>Yes! No long-term contracts. Cancel your subscription anytime from your dashboard. Your service continues until the end of your current billing period.</p>
                 </div>
                 
-                <div class="faq-item">
-                    <h3>How long does setup take?</h3>
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">How long does setup take?</h3>
                     <p>We guarantee your automation is live within 7 days. Most clients are up and running in 3-5 days. We handle everything from setup to training.</p>
                 </div>
                 
-                <div class="faq-item">
-                    <h3>Is training included?</h3>
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">Is training included?</h3>
                     <p>Absolutely! We provide complete training for your team via WhatsApp video call or in-person (for Mysuru businesses). Support continues after launch.</p>
                 </div>
                 
-                <div class="faq-item">
-                    <h3>Can I upgrade or downgrade later?</h3>
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">Can I upgrade or downgrade later?</h3>
                     <p>Yes, switch plans anytime. Upgrade immediately for new features. Downgrades take effect at the next billing cycle.</p>
                 </div>
                 
-                <div class="faq-item">
-                    <h3>Do you offer discounts for annual payments?</h3>
+                <div style="background: var(--color-surface); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--color-border);">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem;">Do you offer discounts for annual payments?</h3>
                     <p>Yes! Pay annually and save 2 months (equivalent to 16% discount). Contact us for annual pricing details.</p>
                 </div>
             </div>
@@ -678,5 +281,9 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/916361319844?text=Hi%20Sushvin%20AI%20Labs" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
