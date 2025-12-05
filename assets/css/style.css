@@ -880,6 +880,93 @@ article ol li {
     align-items: center;
 }
 
+/* ========== FOOTER ========== */
+footer {
+    background: #1a1a2e;
+    color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    font-size: 1.1rem;
+}
+
+.footer-section p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-section a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.founder-credit {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.legal-links {
+    margin-top: 0.75rem;
+}
+
+.legal-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--color-primary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header { z-index: 9999; } /* ensure header stays on top */
@@ -991,5 +1078,23 @@ article ol li {
     
     .service-detail.reverse { 
         direction: ltr; 
+    }
+
+    footer {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.9rem;
     }
 }
