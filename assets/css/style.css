@@ -67,7 +67,7 @@ nav {
     display: flex;
     gap: 2rem;
     list-style: none;
-    flex: 1;
+    /* remove flex:1 to avoid pushing other header items on narrow screens */
 }
 
 .nav-links a {
@@ -90,7 +90,7 @@ nav {
     cursor: pointer;
     color: var(--color-text);
     padding: 0.5rem;
-    z-index: 101;
+    z-index: 110; /* raised so it's above other elements */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -874,52 +874,34 @@ article ol li {
     cursor: pointer;
     color: var(--color-text);
     padding: 0.5rem;
-    z-index: 101;
+    z-index: 110; /* raised so it's above other elements */
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menu-toggle.active {
-    color: var(--color-primary);
-}
-
-.menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: currentColor;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+    header { z-index: 9999; } /* ensure header stays on top */
 
     nav {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .logo {
+        order: 1;
     }
 
     .nav-links {
+        order: 3;
         position: absolute;
         top: 100%;
         left: 0;
@@ -931,25 +913,17 @@ article ol li {
         border-bottom: 1px solid var(--color-border);
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height 0.28s ease;
+        display: flex; /* keep layout predictable; collapsed by max-height */
     }
 
     .nav-links.active {
-        max-height: 400px;
+        max-height: 480px;
     }
 
-    .nav-links li {
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .nav-links li:last-child {
-        border-bottom: none;
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 1rem 1.5rem;
-    }
+    .nav-links li { border-bottom: 1px solid var(--color-border); }
+    .nav-links li:last-child { border-bottom: none; }
+    .nav-links a { display: block; padding: 1rem 1.5rem; }
 
     .hero h1,
     .hero-contact h1,
